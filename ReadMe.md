@@ -6,7 +6,7 @@ Full Stack Developer & Linux Lover
 
 * 🌍  I'm based in Faridabad, HR, India
 * ✉️  You can contact me at [vineyrawat@yahoo.com](mailto:vineyrawat@yahoo.com)
-* 🧠  I'm learning Nest JS
+* 🧠  I'm learning new technologies
 * 🤝  I'm open to collaborating on Any Interesting Project
 
 ### Skills
