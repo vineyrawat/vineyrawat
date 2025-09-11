@@ -1,5 +1,6 @@
 ---
-
+import "../global.css";
+import { MapPin } from "@lucide/astro"
 ---
 
 <html lang="en">
@@ -11,6 +12,167 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		(
+    <div class="min-h-screen bg-white text-black">
+      <div class="max-w-2xl mx-auto px-6 py-16">
+        
+        {/* Header */}
+        <div class="mb-12">
+          <h1 class="text-3xl font-bold mb-2">Vinay Rawat</h1>
+          <p class="text-lg text-gray-600 mb-4">Software Engineer & Linux Lover</p>
+          <div class="flex items-center text-gray-500 mb-6">
+            <MapPin class="w-4 h-4 mr-1" />
+            <span>Bengaluru, India</span>
+          </div>
+        </div>
+
+        {/* Links */}
+        <div class="mb-12">
+          <div class="space-y-2">
+            <div>
+              <a 
+                href="https://vinaybyte.in" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                vinaybyte.in
+              </a>
+            </div>
+            <div>
+              <a 
+                href="https://linkedin.com/in/vineyrawat" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                linkedin.com/in/vineyrawat
+              </a>
+            </div>
+            <div>
+              <a 
+                href="https://github.com/vineyrawat" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                github.com/vineyrawat
+              </a>
+            </div>
+            <div>
+              <a 
+                href="https://orcid.org/0009-0008-6579-934X" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline"
+              >
+                ORCID: 0009-0008-6579-934X
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* About */}
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold mb-4">About</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Passionate Software Engineer with a deep love for Linux systems and open-source development. 
+            Based in Bengaluru, I enjoy building innovative solutions and contributing to the developer 
+            community through various projects and themes.
+          </p>
+        </div>
+
+        {/* Projects */}
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold mb-4">Projects</h2>
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-medium">Tekton Theme</h3>
+              <p class="text-gray-600 text-sm mb-1">Custom App for Frappe framework providing addon themes</p>
+              <a 
+                href="https://github.com/vineyrawat/Tekton-Theme" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline text-sm"
+              >
+                github.com/vineyrawat/Tekton-Theme
+              </a>
+            </div>
+            
+            <div>
+              <h3 class="font-medium">OC Blue Theme Frappe</h3>
+              <p class="text-gray-600 text-sm mb-1">A clean, simple blue style theme for the Frappe framework</p>
+              <a 
+                href="https://github.com/vineyrawat/oc_blue_theme_frappe" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline text-sm"
+              >
+                github.com/vineyrawat/oc_blue_theme_frappe
+              </a>
+            </div>
+            
+            <div>
+              <h3 class="font-medium">Email Verifier React</h3>
+              <p class="text-gray-600 text-sm mb-1">A simple email verification web application built with React.js</p>
+              <a 
+                href="https://github.com/vineyrawat/email-verifier-react" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline text-sm"
+              >
+                github.com/vineyrawat/email-verifier-react
+              </a>
+            </div>
+            
+            <div>
+              <h3 class="font-medium">Convogen Website</h3>
+              <p class="text-gray-600 text-sm mb-1">Modern website built with TypeScript</p>
+              <a 
+                href="https://github.com/vineyrawat/convogen-website" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline text-sm"
+              >
+                github.com/vineyrawat/convogen-website
+              </a>
+            </div>
+            
+            <div>
+              <h3 class="font-medium">Frappe Maps View Builder</h3>
+              <p class="text-gray-600 text-sm mb-1">Custom maps view builder for Frappe framework</p>
+              <a 
+                href="https://github.com/vineyrawat/frappe_maps_view_builder" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 hover:underline text-sm"
+              >
+                github.com/vineyrawat/frappe_maps_view_builder
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Skills */}
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold mb-4">Skills</h2>
+          <p class="text-gray-700 leading-relaxed">
+            <strong>Languages:</strong> JavaScript, TypeScript, Python<br/>
+            <strong>Frameworks:</strong> React.js, Frappe Framework<br/>
+            <strong>Systems:</strong> Linux Administration<br/>
+            <strong>Specialties:</strong> Theme Development, Web Applications, Email Verification Systems<br/>
+            <strong>Tools:</strong> Git, GitHub, Open Source Development
+          </p>
+        </div>
+
+        {/* Stats */}
+        <div class="text-center text-gray-600">
+          <p>49 public repositories on GitHub</p>
+          <p>Focus: Frappe Framework Development, React Applications, Linux Systems</p>
+        </div>
+
+      </div>
+    </div>
+  )
 	</body>
 </html>
