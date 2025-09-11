@@ -8,4 +8,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://vineyrawat.github.io",
+  base: "/vineyrawat",
 });
