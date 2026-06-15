@@ -1,7 +1,92 @@
 ---
 import "../global.css";
-import { MapPin } from "@lucide/astro"
-const trackingid = "G-51HSCQVPZT"
+import { MapPin, Globe, Github, Linkedin, Mail } from "@lucide/astro";
+
+const trackingid = "G-51HSCQVPZT";
+
+const links = [
+  { label: "vinay-rawat.dev", href: "https://vinay-rawat.dev", icon: Globe },
+  { label: "GitHub", href: "https://github.com/vineyrawat", icon: Github },
+  { label: "LinkedIn", href: "https://linkedin.com/in/vineyrawat", icon: Linkedin },
+  { label: "Email", href: "mailto:vinay@vinay-rawat.dev", icon: Mail },
+];
+
+const experience = [
+  {
+    company: "EntriesOne",
+    location: "Bengaluru, India · On-site",
+    roles: [
+      { title: "Principal Engineer", type: "Full-time", period: "Feb 2026 – Present" },
+    ],
+  },
+  {
+    company: "Entries.AI",
+    location: "Bengaluru, India · On-site",
+    roles: [
+      {
+        title: "Principal Engineer",
+        type: "Full-time",
+        period: "Jun 2024 – Present",
+        summary:
+          "Building AI-powered automation to streamline workflows. Backend integration, API development, and system performance with React, Frappe, and TailwindCSS.",
+      },
+    ],
+  },
+  {
+    company: "Extension Technologies",
+    location: "Faridabad, India · On-site",
+    roles: [
+      { title: "Senior Software Engineer", type: "Full-time", period: "Sep 2023 – Jun 2024" },
+      { title: "Full Stack Developer", type: "Full-time", period: "Sep 2021 – Dec 2023" },
+    ],
+  },
+  {
+    company: "Freelance",
+    location: "Faridabad, India",
+    roles: [
+      { title: "Web Developer", type: "Freelance", period: "Feb 2021 – Aug 2021" },
+    ],
+  },
+];
+
+const projects = [
+  {
+    name: "auto-commit",
+    lang: "TypeScript",
+    desc: "AI-driven CLI that generates conventional commits, supporting multiple LLM providers.",
+    href: "https://github.com/vineyrawat/auto-commit",
+  },
+  {
+    name: "convogen",
+    lang: "Dart",
+    desc: "AI chat assistant powered by Gemini APIs.",
+    href: "https://github.com/vineyrawat/convogen",
+  },
+  {
+    name: "saas_theme",
+    lang: "CSS",
+    desc: "Modern SaaS UI for Frappe v16 — dual sidebar and enhanced forms.",
+    href: "https://github.com/vineyrawat/saas_theme",
+  },
+  {
+    name: "Tekton-Theme",
+    lang: "SCSS",
+    desc: "Custom theming app for the Frappe framework.",
+    href: "https://github.com/vineyrawat/Tekton-Theme",
+  },
+  {
+    name: "oc_blue_theme_frappe",
+    lang: "Python",
+    desc: "Clean, simple blue theme for the Frappe framework.",
+    href: "https://github.com/vineyrawat/oc_blue_theme_frappe",
+  },
+  {
+    name: "device-tracker-mobile",
+    lang: "Dart",
+    desc: "Mobile device tracking application.",
+    href: "https://github.com/vineyrawat/device-tracker-mobile",
+  },
+];
 ---
 
 <html lang="en">
@@ -10,7 +95,11 @@ const trackingid = "G-51HSCQVPZT"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta
+			name="description"
+			content="Vinay Rawat — Senior Software Engineer building AI-powered automation and scalable web apps with Frappe, React, and TailwindCSS."
+		/>
+		<title>Vinay Rawat — Senior Software Engineer</title>
 		<script async src={`https://www.googletagmanager.com/gtag/js?id=${trackingid}`}></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -20,166 +109,118 @@ const trackingid = "G-51HSCQVPZT"
 		</script>
 	</head>
 	<body>
-		(
-    <div class="min-h-screen bg-white text-black">
-      <div class="max-w-2xl mx-auto px-6 py-16">
-        
-        {/* Header */}
-        <div class="mb-12">
-          <h1 class="text-3xl font-bold mb-2">Vinay Rawat</h1>
-          <p class="text-lg text-gray-600 mb-4">Software Engineer & Linux Lover</p>
-          <div class="flex items-center text-gray-500 mb-6">
-            <MapPin class="w-4 h-4 mr-1" />
-            <span>Bengaluru, India</span>
-          </div>
-        </div>
+		<div class="min-h-screen bg-white text-black">
+			<div class="max-w-2xl mx-auto px-6 py-16">
 
-        {/* Links */}
-        <div class="mb-12">
-          <div class="space-y-2">
-            <div>
-              <a 
-                href="https://vinaybyte.in" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline"
-              >
-                vinaybyte.in
-              </a>
-            </div>
-            <div>
-              <a 
-                href="https://linkedin.com/in/vineyrawat" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline"
-              >
-                linkedin.com/in/vineyrawat
-              </a>
-            </div>
-            <div>
-              <a 
-                href="https://github.com/vineyrawat" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline"
-              >
-                github.com/vineyrawat
-              </a>
-            </div>
-            <div>
-              <a 
-                href="https://orcid.org/0009-0008-6579-934X" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline"
-              >
-                ORCID: 0009-0008-6579-934X
-              </a>
-            </div>
-          </div>
-        </div>
+				{/* Header */}
+				<header class="mb-14">
+					<h1 class="text-3xl font-bold tracking-tight">Vinay Rawat</h1>
+					<p class="text-lg text-gray-700 mt-1">Senior Software Engineer</p>
+					<p class="text-sm text-gray-500 mt-1">Frappe · React · Node.js · AI Agent Development</p>
+					<div class="flex items-center text-gray-500 text-sm mt-3">
+						<MapPin class="w-4 h-4 mr-1.5" />
+						<span>Bengaluru, India</span>
+					</div>
 
-        {/* About */}
-        <div class="mb-12">
-          <h2 class="text-xl font-semibold mb-4">About</h2>
-          <p class="text-gray-700 leading-relaxed">
-            Passionate Software Engineer with a deep love for Linux systems and open-source development. 
-            Based in Bengaluru, I enjoy building innovative solutions and contributing to the developer 
-            community through various projects and themes.
-          </p>
-        </div>
+					{/* Links */}
+					<nav class="flex flex-wrap gap-x-5 gap-y-2 mt-5">
+						{links.map((link) => (
+							<a
+								href={link.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-flex items-center text-sm text-gray-600 hover:text-black transition-colors"
+							>
+								<link.icon class="w-4 h-4 mr-1.5" />
+								{link.label}
+							</a>
+						))}
+					</nav>
+				</header>
 
-        {/* Projects */}
-        <div class="mb-12">
-          <h2 class="text-xl font-semibold mb-4">Projects</h2>
-          <div class="space-y-4">
-            <div>
-              <h3 class="font-medium">Tekton Theme</h3>
-              <p class="text-gray-600 text-sm mb-1">Custom App for Frappe framework providing addon themes</p>
-              <a 
-                href="https://github.com/vineyrawat/Tekton-Theme" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline text-sm"
-              >
-                github.com/vineyrawat/Tekton-Theme
-              </a>
-            </div>
-            
-            <div>
-              <h3 class="font-medium">OC Blue Theme Frappe</h3>
-              <p class="text-gray-600 text-sm mb-1">A clean, simple blue style theme for the Frappe framework</p>
-              <a 
-                href="https://github.com/vineyrawat/oc_blue_theme_frappe" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline text-sm"
-              >
-                github.com/vineyrawat/oc_blue_theme_frappe
-              </a>
-            </div>
-            
-            <div>
-              <h3 class="font-medium">Email Verifier React</h3>
-              <p class="text-gray-600 text-sm mb-1">A simple email verification web application built with React.js</p>
-              <a 
-                href="https://github.com/vineyrawat/email-verifier-react" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline text-sm"
-              >
-                github.com/vineyrawat/email-verifier-react
-              </a>
-            </div>
-            
-            <div>
-              <h3 class="font-medium">Convogen Website</h3>
-              <p class="text-gray-600 text-sm mb-1">Modern website built with TypeScript</p>
-              <a 
-                href="https://github.com/vineyrawat/convogen-website" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline text-sm"
-              >
-                github.com/vineyrawat/convogen-website
-              </a>
-            </div>
-            
-            <div>
-              <h3 class="font-medium">Frappe Maps View Builder</h3>
-              <p class="text-gray-600 text-sm mb-1">Custom maps view builder for Frappe framework</p>
-              <a 
-                href="https://github.com/vineyrawat/frappe_maps_view_builder" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-blue-600 hover:underline text-sm"
-              >
-                github.com/vineyrawat/frappe_maps_view_builder
-              </a>
-            </div>
-          </div>
-        </div>
+				{/* About */}
+				<section class="mb-14">
+					<h2 class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">About</h2>
+					<p class="text-gray-700 leading-relaxed">
+						Senior Software Engineer based in Bengaluru, building AI-powered automation and
+						scalable web applications with Frappe, React, and TailwindCSS. Linux and open-source
+						enthusiast who enjoys contributing to the developer community.
+					</p>
+				</section>
 
-        {/* Skills */}
-        <div class="mb-12">
-          <h2 class="text-xl font-semibold mb-4">Skills</h2>
-          <p class="text-gray-700 leading-relaxed">
-            <strong>Languages:</strong> JavaScript, TypeScript, Python<br/>
-            <strong>Frameworks:</strong> React.js, Frappe Framework<br/>
-            <strong>Systems:</strong> Linux Administration<br/>
-            <strong>Specialties:</strong> Theme Development, Web Applications, Email Verification Systems<br/>
-            <strong>Tools:</strong> Git, GitHub, Open Source Development
-          </p>
-        </div>
+				{/* Experience */}
+				<section class="mb-14">
+					<h2 class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-6">Experience</h2>
+					<div class="space-y-8">
+						{experience.map((exp) => (
+							<div class="relative pl-6 border-l border-gray-200">
+								<span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-black"></span>
+								<h3 class="font-medium text-gray-900">{exp.company}</h3>
+								<p class="text-xs text-gray-400 mb-3">{exp.location}</p>
+								<div class="space-y-3">
+									{exp.roles.map((role) => (
+										<div>
+											<p class="text-sm font-medium text-gray-800">{role.title}</p>
+											<p class="text-xs text-gray-500">{role.type} · {role.period}</p>
+											{role.summary && (
+												<p class="text-sm text-gray-600 leading-relaxed mt-1">{role.summary}</p>
+											)}
+										</div>
+									))}
+								</div>
+							</div>
+						))}
+					</div>
+				</section>
 
-        {/* Stats */}
-        <div class="text-center text-gray-600">
-          <p>49 public repositories on GitHub</p>
-          <p>Focus: Frappe Framework Development, React Applications, Linux Systems</p>
-        </div>
-      </div>
-    </div>
-  )
+				{/* Projects */}
+				<section class="mb-14">
+					<h2 class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-6">Projects</h2>
+					<div class="space-y-5">
+						{projects.map((project) => (
+							<div>
+								<div class="flex items-baseline gap-2">
+									<a
+										href={project.href}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="font-medium text-gray-900 hover:underline"
+									>
+										{project.name}
+									</a>
+									<span class="text-xs text-gray-400">{project.lang}</span>
+								</div>
+								<p class="text-sm text-gray-600 leading-relaxed mt-0.5">{project.desc}</p>
+							</div>
+						))}
+					</div>
+				</section>
+
+				{/* Skills */}
+				<section class="mb-14">
+					<h2 class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">Skills</h2>
+					<dl class="space-y-2 text-sm">
+						<div class="flex gap-3">
+							<dt class="w-24 shrink-0 text-gray-400">Languages</dt>
+							<dd class="text-gray-700">TypeScript, JavaScript, Python, Dart</dd>
+						</div>
+						<div class="flex gap-3">
+							<dt class="w-24 shrink-0 text-gray-400">Frameworks</dt>
+							<dd class="text-gray-700">React, Node.js, Frappe, TailwindCSS</dd>
+						</div>
+						<div class="flex gap-3">
+							<dt class="w-24 shrink-0 text-gray-400">Focus</dt>
+							<dd class="text-gray-700">AI agent development, automation, web apps, Linux</dd>
+						</div>
+					</dl>
+				</section>
+
+				{/* Footer */}
+				<footer class="text-sm text-gray-400 border-t border-gray-100 pt-6">
+					<p>Frappe development · AI automation · Linux systems</p>
+				</footer>
+
+			</div>
+		</div>
 	</body>
 </html>
