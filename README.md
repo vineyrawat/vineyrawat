@@ -4,4 +4,4 @@ Email: vinay@vinay-rawat.dev
 <br />
 <br />
 
-![Profile view counter on GitHub](https://komarev.com/ghpvc/?username=vineyrawat)
+<!-- ![Profile view counter on GitHub](https://komarev.com/ghpvc/?username=vineyrawat) --!>
